@@ -1,6 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\API\AlbumController;
+use App\Http\Controllers\API\ImageController;
+use App\Http\Controllers\API\NewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::apiResource("news", NewsController::class)->missing(
+    fn() => response()->json(["message" => "No query results for model \"News\""], 404)
+);
+
+Route::apiResource("album", AlbumController::class)->missing(
+    fn() => response()->json(["message" => "No query results for model \"Album\""], 404)
+);
+
+Route::apiResource("image", ImageController::class)->missing(
+    fn() => response()->json(["message" => "No query results for model \"Image\""], 404)
+);
