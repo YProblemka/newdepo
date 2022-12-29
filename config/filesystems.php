@@ -36,12 +36,26 @@ return [
             'throw' => false,
         ],
 
-        'public' => [
+        'news' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
-            'throw' => false,
+            'root' => storage_path('app/news'),
+            "url" => "/img/news",
+            'permissions' => [
+                'dir' => [
+                    'private' => 0755,
+                ],
+            ],
+        ],
+
+        'image' => [
+            'driver' => 'local',
+            'root' => storage_path('app/image'),
+            "url" => "/img/album",
+            'permissions' => [
+                'dir' => [
+                    'private' => 0755,
+                ],
+            ],
         ],
 
         's3' => [
@@ -70,7 +84,8 @@ return [
     */
 
     'links' => [
-        public_path('storage') => storage_path('app/public'),
+        public_path('img/news') => storage_path('app/news'),
+        public_path('img/album') => storage_path('app/image'),
     ],
 
 ];
