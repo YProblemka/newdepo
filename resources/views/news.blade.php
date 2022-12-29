@@ -12,11 +12,11 @@
             <div class="news">
                 @foreach ($news as $article)
                     <article class="article">
-                        <a href="{{route("article")}}"></a>
-                        <img src="{{$article->img_src}}" alt="{{$article->title}}">
+                        <a href="{{route("article", ['article_id' => $article->id])}}"></a>
+                        <img src="{{$article->img_url}}" alt="{{$article->title}}">
                         <div class="article__footer">
                             <p class="article__title">{{$article->title}}</p>
-                            <p class="article__date">{{$article->date}}</p>
+                            <p class="article__date">{{$article->created_at}}</p>
                         </div>
                     </article>
                 @endforeach
@@ -27,6 +27,7 @@
             </div>
         </div>
     </section>
+    @include('inc.mailing')
 @endsection
 @section('scripts')
 @endsection

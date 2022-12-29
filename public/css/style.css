@@ -17,9 +17,22 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+html,body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex-grow: 1;
+}
+
 a {
     text-decoration: none;
-    transition: 0.3s;
+    transition: color 0.3s, background 0.3s;
 }
 
 ul {
@@ -620,4 +633,41 @@ h3 {
 .fotogalery__album>img {
     width: 100%;
     height: 100%;
+}
+
+.mailing form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.mailing input{
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    background: none;
+    border: 2px solid #911991;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.mailing input:focus{    
+    border: 2px solid #339fdd;
+}
+
+.mailing button {
+    background: #911991;
+    color: white;
+    padding: 20px 90px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.mailing button:hover {
+    background: #339fdd;
 }

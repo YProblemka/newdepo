@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/media.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
@@ -20,9 +20,9 @@
             <div class="container">
                 <div class="header__top">
                     <div class="logo">
-                        <a href="/index.html">
+                        <a href="{{route("index")}}">
                             <div class="logo__wrapper">
-                                <img src="img/logo.png" alt="" class="logo__img">
+                                <img src="/img/logo.png" alt="" class="logo__img">
                                 <div class="logo__text">
                                     <p class="logo__text_big">Электродепо Планерное</p>
                                     <p class="logo__text_small">Московского Метрополитена</p>
