@@ -52,5 +52,9 @@ class RouteServiceProvider extends ServiceProvider
         RateLimiter::for('callback', function (Request $request) {
             return Limit::perMinutes(10, 1)->by($request->ip());
         });
+
+        RateLimiter::for('subscribe-newsletter', function (Request $request) {
+            return Limit::perMinutes(10, 1)->by($request->ip());
+        });
     }
 }
