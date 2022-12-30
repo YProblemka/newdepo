@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class VerificationMail extends Mailable
+class VerificationMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -30,6 +30,6 @@ class VerificationMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.verification');
+        return $this->markdown('mail.verification')->subject("Подтверждение почты");
     }
 }
