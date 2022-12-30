@@ -25,7 +25,12 @@ class News extends Model
 
     protected $hidden = ["img_name"];
 
-    protected $appends = ["img_url"];
+    protected $appends = ["img_url", "url"];
+
+    public function getUrlAttribute(): string
+    {
+        return route("article", ['article_id' => $this->id]);
+    }
 
     public function getImgUrlAttribute(): string
     {

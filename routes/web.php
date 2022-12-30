@@ -28,7 +28,7 @@ Route::get('/fotogalery', function () {
 })->name('fotogalery');
 
 Route::get('/news', function () {
-    $news = \App\Models\News::orderBy('created_at', 'DESC')->get();
+    $news = \App\Models\News::orderBy('created_at', 'DESC')->limit(9)->get();
     return view('news', compact('news'));
 })->name('news');
 

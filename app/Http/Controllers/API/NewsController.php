@@ -23,6 +23,7 @@ class NewsController extends Controller
                 "response" => News::query()
                     ->offset($request->get("offset"))
                     ->limit($request->get("limit"))
+                    ->orderBy('created_at', 'DESC')
                     ->get()
             ]);
     }

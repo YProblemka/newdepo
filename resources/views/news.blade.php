@@ -12,7 +12,7 @@
             <div class="news">
                 @foreach ($news as $article)
                     <article class="article">
-                        <a href="{{route("article", ['article_id' => $article->id])}}"></a>
+                        <a href="{{$article->url}}"></a>
                         <img src="{{$article->img_url}}" alt="{{$article->title}}">
                         <div class="article__footer">
                             <p class="article__title">{{$article->title}}</p>
@@ -23,11 +23,12 @@
 
             </div>
             <div class="centered">
-                <button class="btn">Загрузить ещё</button>
+                <button class="btn" id="load-more">Загрузить ещё</button>
             </div>
         </div>
     </section>
     @include('inc.mailing')
 @endsection
 @section('scripts')
+  <script src="/js/load-more.js"></script>
 @endsection
