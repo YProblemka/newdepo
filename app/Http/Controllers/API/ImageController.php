@@ -28,6 +28,7 @@ class ImageController extends Controller
     public function store(ImageRequest $request): JsonResponse
     {
         $image = Image::query()->make($request->all());
+        $image->setImgNameIfNotEmpty($request->file("img"));
         $image->save();
         return response()->json(["message" => "success", "response" => $image]);
     }
@@ -53,6 +54,7 @@ class ImageController extends Controller
     public function update(ImageRequest $request, Image $image): JsonResponse
     {
         $image->update($request->all());
+        $image->setImgNameIfNotEmpty($request->file("img"));
         $image->save();
 
         return response()->json(["message" => "success", "response" => $image]);
