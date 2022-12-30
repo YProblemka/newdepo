@@ -10,26 +10,17 @@
         <div class="container">
             <h2 class="tac">Фотогалерея</h2>
             <div class="fotogalery__list p30">
-                <div class="fotogalery__album">
-                    <div class="fotogalery__count">5</div>
-                    <img src="https://nfcexpert.ru/wp-content/uploads/2022/03/f52f2daf3b.jpg" alt="">
-                    <a href="album.html">Альбом №1 - Поезда</a>
-                </div>
-                <div class="fotogalery__album">
-                    <div class="fotogalery__count">3</div>
-                    <img src="https://chp-msk.ru/wp-content/uploads/2021/01/1-359.jpg" alt="">
-                    <a href="album.html">Альбом №2 - Станции</a>
-                </div>
-                <div class="fotogalery__album">
-                    <div class="fotogalery__count">11</div>
-                    <img src="https://nfcexpert.ru/wp-content/uploads/2022/03/f52f2daf3b.jpg" alt="">
-                    <a href="album.html">Альбом №1 - Поезда</a>
-                </div>
-                <div class="fotogalery__album">
-                    <div class="fotogalery__count">5</div>
-                    <img src="https://chp-msk.ru/wp-content/uploads/2021/01/1-359.jpg" alt="">
-                    <a href="album.html">Альбом №2 - Станции</a>
-                </div>
+                @foreach ($albums as $album)
+                @php($images_count = $album->images()->count())
+                    @if ($images_count != 0)
+                        <div class="fotogalery__album">
+                            <div class="fotogalery__count">{{ $images_count }}</div>
+                            <img src="{{ $album->images()->limit(1)->get()->first()->img_url }}" alt="">
+                            <a href="{{ route('album', ['album' => $album->id]) }}">{{ $album->title }}</a>
+                        </div>
+                    @endif
+                @endforeach
+
             </div>
         </div>
     </section>

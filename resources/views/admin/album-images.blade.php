@@ -18,14 +18,14 @@
             </div>
         </div>
     </div>
-    <div class="row g-4 all-cards admin-images">
+    <div class="row g-4 all-cards admin-images" data-album-id="{{$album->id}}">
         @foreach ($images as $img)
             <div class="col-6 col-md-4 col-xl-3 col-xxl-3">
                 <div class="app-card app-card-doc shadow-sm h-100">
                     <img src="{{ $img->img_url }}" class="image-preview">
                     <div class="app-card-body p-3">
                         <input type="file" class="add-img-btn">
-                        <button class="save-btn btn btn-primary" id="{{ $img->id }}" data-album-id="{{$album->id}}">Сохранить</button>
+                        <button class="save-btn btn btn-primary" id="{{ $img->id }}">Сохранить</button>
                         <button class="delete-btn btn btn-primary" path="image"><i class="far fa-trash-alt"
                                 style="color: white;"></i></button>
                     </div>

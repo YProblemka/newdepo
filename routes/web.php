@@ -18,12 +18,13 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/album', function () {
-    return view('album');
+Route::get('/album/{album}', function (\App\Models\Album $album) {
+    return view('album', compact(("album")));
 })->name('album');
 
 Route::get('/fotogalery', function () {
-    return view('fotogalery');
+    $albums = \App\Models\Album::orderBy('created_at', 'DESC')->get();
+    return view('fotogalery', compact("albums"));
 })->name('fotogalery');
 
 Route::get('/news', function () {
@@ -57,7 +58,7 @@ Route::prefix("administration")->name("admin.")->group(function () {
         })->name('albums');
 
         Route::get('/albums/{album}', function (\App\Models\Album $album) {
-            $images = $album->images()->get();
+            $images = $album->images()->orderBy('created_at', 'DESC')->get();
             return view('admin.album-images', compact("album", "images"));
         })->name('album-images');
     });

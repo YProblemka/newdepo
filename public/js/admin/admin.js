@@ -84,7 +84,7 @@ function update() {
         const save_btn = $(this)[0];
         const id = $(this)[0].id;
         const title = $(this).siblings("input.change-input")[0];
-        
+
         let fd = new FormData();
         fd.append("title", title.value);
 
@@ -149,10 +149,9 @@ function update() {
     $(".admin-images .save-btn").click(function () {
         const save_btn = $(this)[0];
         const id = $(this)[0].id;
-        const album_id = $(this)[0].getAttribute('data-album-id');
+        const album_id = $(".admin-images")[0].getAttribute("data-album-id");
         const img = $(this).parent().siblings(".image-preview")[0];
         const img_input = $(this).siblings(".add-img-btn")[0];
-        
 
         let fd = new FormData();
         fd.append("img", img_input.files[0]);
@@ -261,7 +260,7 @@ $(document).ready(function () {
         update();
     });
     // add news
-    
+
     // add album
     $(".add-btn-albums").click(function () {
         $(".all-cards").prepend(
@@ -281,4 +280,23 @@ $(document).ready(function () {
         update();
     });
     // add album
+
+    // add album-image
+    $(".add-btn-images").click(function () {
+        $(".all-cards").prepend(
+            `<div class="col-6 col-md-4 col-xl-3 col-xxl-3">
+            <div class="app-card app-card-doc shadow-sm h-100">
+                <img src="" class="image-preview">
+                <div class="app-card-body p-3">
+                    <input type="file" class="add-img-btn">
+                    <button class="save-btn btn btn-primary" id="" data-album-id="">Сохранить</button>
+                    <button class="delete-btn btn btn-primary" path="image"><i class="far fa-trash-alt"
+                            style="color: white;"></i></button>
+                </div>
+            </div>
+        </div>`
+        );
+        update();
+    });
+    // add album-image
 });
