@@ -39,7 +39,7 @@ class Image extends Model
     public function setImgNameIfNotEmpty(UploadedFile|string|null $img)
     {
         if (!is_null($img) and ((is_string($img) and $img != "") or !is_string($img))) {
-            $this->img_name = News::saveImg($img);
+            $this->img_name = Image::saveImg($img);
         }
     }
 
