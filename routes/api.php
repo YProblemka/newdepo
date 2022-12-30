@@ -4,6 +4,7 @@ use App\Http\Controllers\API\AlbumController;
 use App\Http\Controllers\API\ImageController;
 use App\Http\Controllers\API\NewsController;
 use App\Http\Controllers\CallbackController;
+use App\Http\Controllers\SubscribeNewsletterController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -22,3 +23,9 @@ Route::apiResource("image", ImageController::class)->missing(
 );
 
 Route::post("/callback-form", [CallbackController::class, "callbackForm"])->middleware("throttle:callback");
+
+Route::group(["prefix" => "newsletter"], function () {
+    Route::post("/subscription", [SubscribeNewsletterController::class, "subscription"])->middleware("throttle:subscribe-newsletter");
+    Route::post("/confirmation", [SubscribeNewsletterController::class, "confirmation"]);
+    Route::post("/unsubscribe", [SubscribeNewsletterController::class, "unsubscribe"]);
+});

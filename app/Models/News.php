@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Casts\DateNameCast;
+use App\Events\NewsSavingEvent;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
@@ -12,6 +13,10 @@ use Illuminate\Support\Facades\Request;
 class News extends Model
 {
     use HasFactory;
+
+    protected $dispatchesEvents = [
+        'created' => NewsSavingEvent::class,
+    ];
 
     protected $fillable = [
         'title',
