@@ -21,22 +21,22 @@ Route::get('/', function () {
 
 Route::get('/album/{album}', function (\App\Models\Album $album) {
     return view('album', compact(("album")));
-})->name('album');
+})->name('album')->middleware("cache.page:10");
 
 Route::get('/fotogalery', function () {
     $albums = \App\Models\Album::orderBy('created_at', 'DESC')->get();
     return view('fotogalery', compact("albums"));
-})->name('fotogalery');
+})->name('fotogalery')->middleware("cache.page:10");
 
 Route::get('/news', function () {
     $news = \App\Models\News::orderBy('created_at', 'DESC')->limit(9)->get();
     return view('news', compact('news'));
-})->name('news');
+})->name('news')->middleware("cache.page:10");
 
 Route::get('/news/{article_id}', function ($article_id) {
     $article = \App\Models\News::query()->where("id", $article_id)->get()->first();
     return view('article', compact('article'));
-})->name('article');
+})->name('article')->middleware("cache.page:10");
 
 Route::get('/structure', function () {
     return view('structure');
