@@ -3,6 +3,7 @@
 use App\Http\Controllers\API\AlbumController;
 use App\Http\Controllers\API\ImageController;
 use App\Http\Controllers\API\NewsController;
+use App\Http\Controllers\CallbackController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,5 @@ Route::apiResource("album", AlbumController::class)->missing(
 Route::apiResource("image", ImageController::class)->missing(
     fn() => response()->json(["message" => "No query results for model \"Image\""], 404)
 );
+
+Route::post("/callback-form", [CallbackController::class, "callbackForm"])->middleware("throttle:callback");
