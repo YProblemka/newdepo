@@ -12,4 +12,9 @@ class Album extends Model
     protected $fillable = [
         'title',
     ];
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
 }

@@ -50,5 +50,15 @@ Route::prefix("administration")->name("admin.")->group(function () {
             $news = \App\Models\News::orderBy('created_at', 'DESC')->get();
             return view('admin.news', compact("news"));
         })->name('news');
+
+        Route::get('/albums', function () {
+            $albums = \App\Models\Album::orderBy('created_at', 'DESC')->get();
+            return view('admin.albums', compact("albums"));
+        })->name('albums');
+
+        Route::get('/albums/{album}', function (\App\Models\Album $album) {
+            $images = $album->images()->get();
+            return view('admin.album-images', compact("album", "images"));
+        })->name('album-images');
     });
 });
