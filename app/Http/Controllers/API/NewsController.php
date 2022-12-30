@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\NewsRequest;
+use App\Http\Requests\NewsSortRequest;
 use App\Models\News;
 use Illuminate\Http\JsonResponse;
 
@@ -14,9 +15,16 @@ class NewsController extends Controller
      *
      * @return JsonResponse
      */
-    public function index(): JsonResponse
+    public function index(NewsSortRequest $request): JsonResponse
     {
-        return response()->json(["message" => "success", "response" => News::all()]);
+        return response()->json(
+            [
+                "message" => "success",
+                "response" => News::query()
+                    ->offset($request->get("offset"))
+                    ->limit($request->get("limit"))
+                    ->get()
+            ]);
     }
 
     /**
