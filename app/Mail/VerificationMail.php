@@ -30,6 +30,6 @@ class VerificationMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.verification');
+        return $this->markdown('mail.verification')->subject("Подтверждение почты");
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SubscribeNewsletterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
@@ -63,3 +64,6 @@ Route::prefix("administration")->name("admin.")->group(function () {
         })->name('album-images');
     });
 });
+
+Route::get("/newsletter/confirmation", [SubscribeNewsletterController::class, "confirmation"])->name("newsletter.confirmation");
+Route::get("/newsletter/unsubscribe", [SubscribeNewsletterController::class, "unsubscribe"])->name("newsletter.unsubscribe");

@@ -36,6 +36,6 @@ class CallbackFormMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.callback_form');
+        return $this->markdown('mail.callback_form')->subject("Новая заявка обратной связи");
     }
 }

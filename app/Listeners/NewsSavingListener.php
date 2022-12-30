@@ -5,8 +5,6 @@ namespace App\Listeners;
 use App\Events\NewsSavingEvent;
 use App\Mail\NewsMail;
 use App\Models\SubscribeNewsletter;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Mail;
 
 class NewsSavingListener
@@ -31,7 +29,7 @@ class NewsSavingListener
     {
         $subscribers = SubscribeNewsletter::query()->where('is_verified', true)->get();
         foreach ($subscribers as $subscriber) {
-            Mail::to($subscriber->email)->send(new NewsMail($event->news));
+            Mail::to($subscriber->email)->send(new NewsMail($event->news, $subscriber->getHashKey()));
         }
     }
 }

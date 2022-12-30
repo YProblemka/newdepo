@@ -13,6 +13,9 @@
         let fd = new FormData(mailing);
         fetch("/api/newsletter/subscription", {
             method: 'POST',
+            headers: {
+                'Accept': 'application/json'
+            },
             body: fd
         }).then(response => {
             switch (response.status) {

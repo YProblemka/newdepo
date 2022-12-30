@@ -26,6 +26,4 @@ Route::post("/callback-form", [CallbackController::class, "callbackForm"])->midd
 
 Route::group(["prefix" => "newsletter"], function () {
     Route::post("/subscription", [SubscribeNewsletterController::class, "subscription"])->middleware("throttle:subscribe-newsletter");
-    Route::post("/confirmation", [SubscribeNewsletterController::class, "confirmation"]);
-    Route::post("/unsubscribe", [SubscribeNewsletterController::class, "unsubscribe"]);
 });
