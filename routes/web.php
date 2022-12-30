@@ -45,10 +45,10 @@ Route::prefix("administration")->name("admin.")->group(function () {
     Route::post('/login', [AuthController::class, "login"])->name("login")->middleware("guest");
     Route::get('/logout', [AuthController::class, "logout"])->name("logout")->middleware("auth");
 
-    // Route::middleware("auth")->group(function () {
+    Route::middleware("auth")->group(function () {
         Route::get('/news', function () {
             $news = \App\Models\News::orderBy('created_at', 'DESC')->get();
             return view('admin.news', compact("news"));
         })->name('news');
-    // });
+    });
 });
