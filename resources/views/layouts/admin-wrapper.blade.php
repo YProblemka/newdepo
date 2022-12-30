@@ -52,7 +52,7 @@
 
                         <div class="app-utilities col-auto">
                             <div class="app-utility-item">
-                                {{-- <i class="admin-name">{{ auth()->user()->nickname }}</i> --}}
+                                <i class="admin-name">{{ auth()->user()->login }}</i>
                                 <a class="btn app-btn-primary" style="margin-left: 10px;" href="{{ route("admin.logout") }}"><i class="fa fa-sign-out" style="color: white"></i></a>
                             </div>
                         </div>
