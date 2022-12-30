@@ -41,7 +41,7 @@ function update() {
                     } else if (data.status == 404) {
                         alert("Не найдено");
                     } else if (data.status == 500) {
-                        alert("Написать разработчикам");
+                        alert("Неизвестна ошибка, напишите разработчикам!");
                     }
                 },
             });
@@ -70,7 +70,7 @@ function update() {
                     } else if (data.status == 404) {
                         alert("Не найдено");
                     } else if (data.status == 500) {
-                        alert("Написать разработчикам");
+                        alert("Неизвестна ошибка, напишите разработчикам!");
                     }
                 },
             });
@@ -109,7 +109,7 @@ function update() {
                     } else if (data.status == 404) {
                         alert("Не найдено");
                     } else if (data.status == 500) {
-                        alert("Написать разработчикам");
+                        alert("Неизвестна ошибка, напишите разработчикам!");
                     }
                 },
             });
@@ -136,7 +136,7 @@ function update() {
                     } else if (data.status == 404) {
                         alert("Не найдено");
                     } else if (data.status == 500) {
-                        alert("Написать разработчикам");
+                        alert("Неизвестна ошибка, напишите разработчикам!");
                     }
                 },
             });
@@ -178,7 +178,7 @@ function update() {
                     } else if (data.status == 404) {
                         alert("Не найдено");
                     } else if (data.status == 500) {
-                        alert("Написать разработчикам");
+                        alert("Неизвестна ошибка, напишите разработчикам!");
                     }
                 },
             });
@@ -205,7 +205,7 @@ function update() {
                     } else if (data.status == 404) {
                         alert("Не найдено");
                     } else if (data.status == 500) {
-                        alert("Написать разработчикам");
+                        alert("Неизвестна ошибка, напишите разработчикам!");
                     }
                 },
             });
@@ -231,7 +231,7 @@ function update() {
                 if (data.status == 404) {
                     alert("Ошибка");
                 } else if (data.status == 500) {
-                    alert("Написать разработчикам");
+                    alert("Неизвестна ошибка, напишите разработчикам!");
                 }
             },
         });
