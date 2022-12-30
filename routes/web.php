@@ -33,8 +33,7 @@ Route::get('/news', function () {
     return view('news', compact('news'));
 })->name('news')->middleware("cache.page:10");
 
-Route::get('/news/{article_id}', function ($article_id) {
-    $article = \App\Models\News::query()->where("id", $article_id)->get()->first();
+Route::get('/news/{article}', function (\App\Models\News $article) {
     return view('article', compact('article'));
 })->name('article')->middleware("cache.page:10");
 
