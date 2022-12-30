@@ -1,19 +1,20 @@
 @extends('layouts/wrapper')
 
 @section('title')
-    {{$article->title}}
+    {{ $article->title }}
 @endsection
 @section('links')
 @endsection
 @section('main')
     <section class="text-section article-inner">
         <div class="container">
-            <h2>{{$article->title}}</h2>
-            <p class="text-bold article-date">{{$article->created_at}}</p>
-            <img src="{{$article->img_url}}" alt="">
+            <h2>{{ $article->title }}</h2>
+            <p class="text-bold article-date">{{ $article->created_at }}</p>
             <p>
-                {{$article->content}}
+                {!! html_entity_decode(str_replace(["\r\n", "\n"], '</p><p>', $article->content)) !!}
             </p>
+            <img src="{{ $article->img_url }}" alt="">
+
             @include('inc.socials')
         </div>
     </section>

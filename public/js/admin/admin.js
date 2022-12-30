@@ -6,19 +6,20 @@ $.ajaxSetup({
 function update() {
     // update news
     $(".admin-news .save-btn").click(function () {
+        const save_btn = $(this)[0];
         const id = $(this)[0].id;
         const title = $(this).siblings("input.change-input")[0];
-        const content = $(this)
-            .siblings(".app-doc-meta")
-            .find(".change-input")[0];
-
+        const content = $(this).siblings("textarea.change-input")[0];
+        const img = $(this).parent().siblings(".image-preview")[0];
+        const img_input = $(this).siblings(".add-img-btn")[0];
         let fd = new FormData();
-
         fd.append("title", title.value);
         fd.append("content", content.value);
-        
+        if (img_input.files[0]) {
+            fd.append("img", img_input.files[0]);
+        }
         if ($(this)[0].id !== "") {
-            fd.append("_method", "POST");
+            fd.append("_method", "PUT");
             $.ajax({
                 type: "POST",
                 cache: false,
@@ -27,10 +28,10 @@ function update() {
                 data: fd,
                 url: "/api/news/" + id,
                 success: function (data) {
-                    // title.innerText = data.response.title;
-                    // date.innerText = data.response.date;
-                    console.log("a")
-                    
+                    title.value = data.response.title;
+                    content.value = data.response.content;
+                    img.src = data.response.img_url;
+                    alert("Успешно обновлено");
                 },
                 error: function (data) {
                     if (data.status == 422) {
@@ -53,10 +54,15 @@ function update() {
                 processData: false,
                 contentType: false,
                 data: fd,
-                url: "/action/post",
+                url: "/api/news",
                 success: function (data) {
-                    console.log("b")
-                    
+                    title.value = data.response.title;
+                    content.value = data.response.content;
+                    img.src = data.response.img_url;
+                    save_btn.id = data.response.id;
+                    console.log(this)
+                    console.log($(this))
+                    alert("Успешно создано");
                 },
                 error: function (data) {
                     if (data.status == 422) {
@@ -74,19 +80,17 @@ function update() {
         }
     });
     // update news
-
     // delete someone
     $(".delete-btn").click(function () {
-        var closet = $(this).closest(".col-6");
+        let closet = $(this).closest(".col-6");
         $.ajax({
             type: "POST",
             data: { _method: "DELETE" },
-            url:
-                "/action/" +
-                $(this)[0].attributes.getNamedItem("path").value +
-                "/" +
-                $(this).siblings(".save-btn")[0].id,
+            url: `/api/${$(this)[0].attributes.getNamedItem("path").value}/${
+                $(this).siblings(".save-btn")[0].id
+            }`,
             success: function (data) {
+                alert("Успешно удалено");
                 closet.remove();
             },
             error: function (data) {
@@ -100,41 +104,26 @@ function update() {
     });
     // delete someone
 }
-
 $(document).ready(function () {
     update();
-
     // add news
-    $(".add-btn-services").click(function () {
+    $(".add-btn-news").click(function () {
         $(".all-cards").prepend(
-            `<div class="col-6 col-md-4 col-xl-3 col-xxl-4">
-            <div class="app-card app-card-doc shadow-sm h-100">
-                <img src="" class="admin-services-img">
-                <div class="app-card-body p-3">
-                    <input type="file" class="add-img-btn">
-                    <h4 class="app-doc-title truncate mb-0" title=""></h4>
-                    <input type="text" name="name" class="change-input" placeholder="Название услуги"
-                        value="">
-                    <div class="app-doc-meta">
-                        <ul class="list-unstyled mb-0">
-                            <li class="services-dcp-text">
-                                <span class="text-muted">Описание:</span>
-                                <span class="admin-services-dcp"></span>
-                            </li>
-                            <textarea name="services-dcp" class="services-dcp product-dcp" placeholder="Описание"></textarea>
-                        </ul>
+            `<div class="col-6 col-md-4 col-xl-3 col-xxl-3">
+                <div class="app-card app-card-doc shadow-sm h-100">
+                    <img src="" class="image-preview">
+                    <div class="app-card-body p-3">
+                        <input type="file" class="add-img-btn">
+                        <input type="text" class="change-input" value="" placeholder="Заголовок новости">
+                        <textarea class="change-input" placeholder="Текст новости"></textarea>
+                        <button class="save-btn btn btn-primary" id="">Сохранить</button>
+                        <button class="delete-btn btn btn-primary" path="news"><i class="far fa-trash-alt"
+                                style="color: white;"></i></button>
                     </div>
-                    <button class="change-btn change-btn-services btn btn-primary">Изменить</button>
-                    <button class="save-btn save-btn-services btn btn-primary"
-                        id="">Сохранить</button>
-                    <button class="delete-btn btn btn-primary" path="service"><i class="far fa-trash-alt"
-                            style="color: white;"></i></button>
                 </div>
-            </div>
-        </div>`
+            </div>`
         );
         update();
     });
     // add news
-
 });

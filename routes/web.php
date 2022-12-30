@@ -27,7 +27,7 @@ Route::get('/fotogalery', function () {
 })->name('fotogalery');
 
 Route::get('/news', function () {
-    $news = \App\Models\News::all();
+    $news = \App\Models\News::orderBy('created_at', 'DESC')->get();
     return view('news', compact('news'));
 })->name('news');
 
@@ -47,7 +47,7 @@ Route::prefix("administration")->name("admin.")->group(function () {
 
     // Route::middleware("auth")->group(function () {
         Route::get('/news', function () {
-            $news = \App\Models\News::all();
+            $news = \App\Models\News::orderBy('created_at', 'DESC')->get();
             return view('admin.news', compact("news"));
         })->name('news');
     // });

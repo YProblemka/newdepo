@@ -11,7 +11,7 @@
             <div class="page-utilities">
                 <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
                     <div class="col-auto">
-                        <button class="btn app-btn-primary add-btn add-btn-blog"><i class="fa fa-plus"
+                        <button class="btn app-btn-primary add-btn add-btn-news"><i class="fa fa-plus"
                                 style="margin-right:5px;"></i>Создать</button>
                     </div>
                 </div>
@@ -22,16 +22,13 @@
         @foreach ($news as $article)
             <div class="col-6 col-md-4 col-xl-3 col-xxl-3">
                 <div class="app-card app-card-doc shadow-sm h-100">
+                    <img src="{{ $article->img_url }}" class="image-preview">
                     <div class="app-card-body p-3">
-                        <input type="text" class="change-input" placeholder="Имя"
-                            value="{{ $article->title }}">
-                        <div class="app-doc-meta">
-                            <ul class="list-unstyled mb-0">
-                                <textarea class="change-input">{{ $article->content }}</textarea>
-                            </ul>
-                        </div>
+                        <input type="file" class="add-img-btn">
+                        <input type="text" class="change-input" value="{{ $article->title }}" placeholder="Заголовок новости">
+                        <textarea class="change-input" placeholder="Текст новости">{{ $article->content }}</textarea>
                         <button class="save-btn btn btn-primary" id="{{ $article->id }}">Сохранить</button>
-                        <button class="delete-btn btn btn-primary" path="post"><i class="far fa-trash-alt"
+                        <button class="delete-btn btn btn-primary" path="news"><i class="far fa-trash-alt"
                                 style="color: white;"></i></button>
                     </div>
                 </div>

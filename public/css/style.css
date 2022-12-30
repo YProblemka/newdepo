@@ -296,7 +296,7 @@ h3 {
 .text-section p {
     line-height: 150%;
     font-size: 24px;
-    margin-bottom: 15px;
+    padding-bottom: 15px;
     text-indent: 30px
 }
 
