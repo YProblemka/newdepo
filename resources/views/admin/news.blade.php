@@ -27,8 +27,8 @@
                         <input type="file" class="add-img-btn">
                         <input type="text" class="change-input" value="{{ $article->title }}" placeholder="Заголовок новости">
                         <textarea class="change-input" placeholder="Текст новости">{{ $article->content }}</textarea>
-                        <button class="save-btn btn btn-primary" id="{{ $article->id }}">Сохранить</button>
-                        <button class="delete-btn btn btn-primary" path="news"><i class="far fa-trash-alt"
+                        <button class="save-btn btn btn-primary no-action" id="{{ $article->id }}">Сохранить</button>
+                        <button class="delete-btn btn btn-primary no-action" path="news"><i class="far fa-trash-alt"
                                 style="color: white;"></i></button>
                     </div>
                 </div>
