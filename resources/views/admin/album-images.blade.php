@@ -25,8 +25,8 @@
                     <img src="{{ $img->img_url }}" class="image-preview">
                     <div class="app-card-body p-3">
                         <input type="file" class="add-img-btn">
-                        <button class="save-btn btn btn-primary" id="{{ $img->id }}">Сохранить</button>
-                        <button class="delete-btn btn btn-primary" path="image"><i class="far fa-trash-alt"
+                        <button class="save-btn btn btn-primary no-action" id="{{ $img->id }}">Сохранить</button>
+                        <button class="delete-btn btn btn-primary no-action" path="image"><i class="far fa-trash-alt"
                                 style="color: white;"></i></button>
                     </div>
                 </div>

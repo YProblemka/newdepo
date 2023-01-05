@@ -24,10 +24,10 @@
                 <div class="app-card app-card-doc shadow-sm h-100">
                     <div class="app-card-body p-3">
                         <input type="text" class="change-input" value="{{ $album->title }}" placeholder="Название альбома">
-                        <button class="save-btn btn btn-primary" id="{{ $album->id }}">Сохранить</button>
+                        <button class="save-btn btn btn-primary no-action" id="{{ $album->id }}">Сохранить</button>
                         <a class="btn btn-primary" href="{{ route('admin.album-images', ['album' => $album->id]) }}">Изменить
                             фото</a>
-                        <button class="delete-btn btn btn-primary" path="album"><i class="far fa-trash-alt"
+                        <button class="delete-btn btn btn-primary no-action" path="album"><i class="far fa-trash-alt"
                                 style="color: white;"></i></button>
                     </div>
                 </div>

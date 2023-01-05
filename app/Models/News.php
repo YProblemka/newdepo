@@ -34,7 +34,7 @@ class News extends Model
 
     public function getUrlAttribute(): string
     {
-        return route("article", ['article_id' => $this->id]);
+        return route("article", ['article' => $this->id]);
     }
 
     public function getImgUrlAttribute(): string

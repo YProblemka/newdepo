@@ -5,7 +5,7 @@ $.ajaxSetup({
 });
 function update() {
     // update news
-    $(".admin-news .save-btn").click(function () {
+    $(".admin-news .save-btn.no-action").click(function () {
         const save_btn = $(this)[0];
         const id = $(this)[0].id;
         const title = $(this).siblings("input.change-input")[0];
@@ -41,7 +41,7 @@ function update() {
                     } else if (data.status == 404) {
                         alert("Не найдено");
                     } else if (data.status == 500) {
-                        alert("Написать разработчикам");
+                        alert("Неизвестна ошибка, напишите разработчикам!");
                     }
                 },
             });
@@ -70,7 +70,7 @@ function update() {
                     } else if (data.status == 404) {
                         alert("Не найдено");
                     } else if (data.status == 500) {
-                        alert("Написать разработчикам");
+                        alert("Неизвестна ошибка, напишите разработчикам!");
                     }
                 },
             });
@@ -80,7 +80,7 @@ function update() {
     // update news
 
     // update albums
-    $(".admin-albums .save-btn").click(function () {
+    $(".admin-albums .save-btn.no-action").click(function () {
         const save_btn = $(this)[0];
         const id = $(this)[0].id;
         const title = $(this).siblings("input.change-input")[0];
@@ -109,7 +109,7 @@ function update() {
                     } else if (data.status == 404) {
                         alert("Не найдено");
                     } else if (data.status == 500) {
-                        alert("Написать разработчикам");
+                        alert("Неизвестна ошибка, напишите разработчикам!");
                     }
                 },
             });
@@ -136,7 +136,7 @@ function update() {
                     } else if (data.status == 404) {
                         alert("Не найдено");
                     } else if (data.status == 500) {
-                        alert("Написать разработчикам");
+                        alert("Неизвестна ошибка, напишите разработчикам!");
                     }
                 },
             });
@@ -146,7 +146,7 @@ function update() {
     // update albums
 
     // update album-image
-    $(".admin-images .save-btn").click(function () {
+    $(".admin-images .save-btn.no-action").click(function () {
         const save_btn = $(this)[0];
         const id = $(this)[0].id;
         const album_id = $(".admin-images")[0].getAttribute("data-album-id");
@@ -178,7 +178,7 @@ function update() {
                     } else if (data.status == 404) {
                         alert("Не найдено");
                     } else if (data.status == 500) {
-                        alert("Написать разработчикам");
+                        alert("Неизвестна ошибка, напишите разработчикам!");
                     }
                 },
             });
@@ -205,7 +205,7 @@ function update() {
                     } else if (data.status == 404) {
                         alert("Не найдено");
                     } else if (data.status == 500) {
-                        alert("Написать разработчикам");
+                        alert("Неизвестна ошибка, напишите разработчикам!");
                     }
                 },
             });
@@ -215,7 +215,7 @@ function update() {
     // update album-image
 
     // delete someone
-    $(".delete-btn").click(function () {
+    $(".delete-btn.no-action").click(function () {
         let closet = $(this).closest(".col-6");
         $.ajax({
             type: "POST",
@@ -229,14 +229,15 @@ function update() {
             },
             error: function (data) {
                 if (data.status == 404) {
-                    alert("Ошибка");
+                    alert("Ошибка, не найдено");
                 } else if (data.status == 500) {
-                    alert("Написать разработчикам");
+                    alert("Неизвестна ошибка, напишите разработчикам!");
                 }
             },
         });
     });
     // delete someone
+    $(".no-action").removeClass("no-action");
 }
 $(document).ready(function () {
     update();
@@ -250,8 +251,8 @@ $(document).ready(function () {
                         <input type="file" class="add-img-btn">
                         <input type="text" class="change-input" value="" placeholder="Заголовок новости">
                         <textarea class="change-input" placeholder="Текст новости"></textarea>
-                        <button class="save-btn btn btn-primary" id="">Сохранить</button>
-                        <button class="delete-btn btn btn-primary" path="news"><i class="far fa-trash-alt"
+                        <button class="save-btn btn btn-primary no-action" id="">Сохранить</button>
+                        <button class="delete-btn btn btn-primary no-action" path="news"><i class="far fa-trash-alt"
                                 style="color: white;"></i></button>
                     </div>
                 </div>
@@ -268,10 +269,10 @@ $(document).ready(function () {
                 <div class="app-card app-card-doc shadow-sm h-100">
                     <div class="app-card-body p-3">
                         <input type="text" class="change-input" value="" placeholder="Название альбома">
-                        <button class="save-btn btn btn-primary" id="">Сохранить</button>
+                        <button class="save-btn btn btn-primary no-action" id="">Сохранить</button>
                         <a class="btn btn-primary" href="{{ route('admin.album-images', ['album' => $album->id]) }}">Изменить
                             фото</a>
-                        <button class="delete-btn btn btn-primary" path="album"><i class="far fa-trash-alt"
+                        <button class="delete-btn btn btn-primary no-action" path="album"><i class="far fa-trash-alt"
                                 style="color: white;"></i></button>
                     </div>
                 </div>
@@ -289,8 +290,8 @@ $(document).ready(function () {
                 <img src="" class="image-preview">
                 <div class="app-card-body p-3">
                     <input type="file" class="add-img-btn">
-                    <button class="save-btn btn btn-primary" id="" data-album-id="">Сохранить</button>
-                    <button class="delete-btn btn btn-primary" path="image"><i class="far fa-trash-alt"
+                    <button class="save-btn btn btn-primary no-action" id="" data-album-id="">Сохранить</button>
+                    <button class="delete-btn btn btn-primary no-action" path="image"><i class="far fa-trash-alt"
                             style="color: white;"></i></button>
                 </div>
             </div>
