@@ -1,10 +1,5 @@
 #!/bin/bash
 
-if ! [ -x "$(command -v docker-compose)" ]; then
-  echo 'Error: docker-compose is not installed.' >&2
-  exit 1
-fi
-
 loadEnv() {
   local envFile="${1?Missing environment file}"
   local environmentAsArray variableDeclaration
@@ -30,6 +25,6 @@ echo -e "\033[1;32m \033[41m Getting a wildcard certificate... \033[0m"
 ./docker/certbot/run.sh $DOMAIN $CLOUDFLARE_API_KEY $CLOUDFLARE_EMAIL
 
 echo -e "\033[1;32m \033[41m Reboot... \033[0m"
-docker-compose build
-docker-compose down
-docker-compose up -d
+docker compose build
+docker compose down
+docker compose up -d
