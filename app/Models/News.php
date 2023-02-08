@@ -39,6 +39,8 @@ class News extends Model
 
     public function getImgUrlAttribute(): string
     {
+        if (is_null($this->img_name))
+            return Request::root() . "/img/no_photo.jpg";
         return Request::root() . $this->getImgSrc();
     }
 
