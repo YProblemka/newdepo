@@ -46,7 +46,7 @@
             </p>
         </div>
     </section>
-    
+
     @include('inc.contact-form-section')
     @include('inc.map-section')
 
