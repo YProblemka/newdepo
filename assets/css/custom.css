@@ -1,0 +1,61 @@
+footer{
+    margin-top: 30px !important;
+}
+
+#callback_form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    width: min(800px, 80%);
+    min-width: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#callback_form input, #callback_form textarea {
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    width: 100%;
+    background: none;
+    border: 2px solid #754969;
+    border-radius: 2px;
+}
+
+#callback_form textarea{
+    resize: none;
+    height: 150px;
+}
+
+#callback_form button{
+    background: #FF8D00;
+    color: white;
+    padding: 20px 90px;
+    font-size: 20px;
+}
+
+.callback__title{
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.center{
+    text-align: center;
+}
+
+.index-about-us{
+    font-size: 40px;
+    margin-bottom: 0;
+    font-family: 'Montserrat';
+    color: #0098e5;
+    line-height: 1.5;
+}
