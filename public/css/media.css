@@ -1,5 +1,4 @@
 @media screen and (max-width: 1100px) {
-
     .header .header__contacts {
         flex-direction: column;
         gap: 0px;
@@ -53,7 +52,6 @@
 }
 
 @media screen and (max-width: 660px) {
-
     .news,
     .apparat__list,
     .fotogalery__list {
@@ -98,6 +96,10 @@
         font-size: 16px;
     }
 
+    .text-section li {
+        font-size: 16px;
+    }
+
     .jb img {
         height: 350px;
     }
@@ -122,6 +124,10 @@
     }
 
     .text-section p {
+        font-size: 14px;
+    }
+
+    .text-section li {
         font-size: 14px;
     }
 }
