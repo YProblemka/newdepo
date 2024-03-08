@@ -1,4 +1,4 @@
-<div class="socials">
+{{-- <div class="socials">
     <p class="text-bold indent0 purple">Мы в соцсетях</p>
     <div class="socials__list">
         <a href="#">
@@ -16,4 +16,4 @@
             </svg>
         </a>
     </div>
-</div>
+</div> --}}

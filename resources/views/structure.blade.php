@@ -52,41 +52,68 @@
                 <h3 class="tac">Аппарат</h3>
                 <div class="apparat__list">
                     <div class="apparat-card">
-                        <img src="https://get.pxhere.com/photo/person-people-portrait-facial-expression-hairstyle-smile-emotion-portrait-photography-134689.jpg"
-                            alt="">
+                        <img src="https://www.sport-uray.ru/wp-content/uploads/avatar-scaled.jpeg" alt="">
                         <div class="article__footer">
-                            <p class="article__title">Клопов Кирилл Сергеевич</p>
-                            <p class="article__date pt0">Заместитель председателя Дорпрофжел</p>
-                            <p class="article__date pt0">Тел: <a href="tel:+7 777 777 77 77">+7 777 777 77 77</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="apparat-card">
-                        <img src="https://get.pxhere.com/photo/person-people-portrait-facial-expression-hairstyle-smile-emotion-portrait-photography-134689.jpg"
-                            alt="">
-                        <div class="article__footer">
-                            <p class="article__title">Клопов Кирилл Сергеевич</p>
-                            <p class="article__date pt0">Заместитель председателя Дорпрофжел</p>
-                            <p class="article__date pt0">Тел: <a href="tel:+7 777 777 77 77">+7 777 777 77 77</a>
+                            <p class="article__title">Еланский Владислав Георгиевич</p>
+                            <p class="article__date pt0">Председатель Дорпрофжел</p>
+                            <p class="article__date pt0">Тел: <a href="tel:8-495-688-04-63">8-495-688-04-63</a>
                             </p>
                         </div>
                     </div>
                     <div class="apparat-card">
                         <img src="https://www.sport-uray.ru/wp-content/uploads/avatar-scaled.jpeg" alt="">
                         <div class="article__footer">
-                            <p class="article__title">Клопов Кирилл Сергеевич</p>
+                            <p class="article__title">Сидорова Надежда Анатольевна</p>
                             <p class="article__date pt0">Заместитель председателя Дорпрофжел</p>
-                            <p class="article__date pt0">Тел: <a href="tel:+7 777 777 77 77">+7 777 777 77 77</a>
+                            <p class="article__date pt0">Тел:
+                                <a href="tel:8-495-688-04-61">8-495-688-04-61</a>
                             </p>
                         </div>
                     </div>
                     <div class="apparat-card">
-                        <img src="https://get.pxhere.com/photo/person-people-portrait-facial-expression-hairstyle-smile-emotion-portrait-photography-134689.jpg"
-                            alt="">
+                        <img src="https://www.sport-uray.ru/wp-content/uploads/avatar-scaled.jpeg" alt="">
                         <div class="article__footer">
-                            <p class="article__title">Клопов Кирилл Сергеевич</p>
-                            <p class="article__date">Заместитель председателя Дорпрофжел</p>
-                            <p class="article__date">Тел: <a href="tel:+7 777 777 77 77">+7 777 777 77 77</a></p>
+                            <p class="article__title">Мокрина Юлия Викторовна</p>
+                            <p class="article__date pt0">Заведующий отделом организационной и кадровой работы</p>
+                            <p class="article__date pt0">Тел:
+                                <a href="tel:8-495-688-02-97">8-495-688-02-97</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="apparat-card">
+                        <img src="https://www.sport-uray.ru/wp-content/uploads/avatar-scaled.jpeg" alt="">
+                        <div class="article__footer">
+                            <p class="article__title">Гапеева Елена Викторовна</p>
+                            <p class="article__date pt0">Заведующий отделом социальной-экономической работы</p>
+                            <p class="article__date pt0">Тел: <a href="tel:8-499-325-01-15">8-499-325-01-15</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="apparat-card">
+                        <img src="https://www.sport-uray.ru/wp-content/uploads/avatar-scaled.jpeg" alt="">
+                        <div class="article__footer">
+                            <p class="article__title">Липатов Николай Александрович</p>
+                            <p class="article__date pt0">Главный технический инспектор</p>
+                            <p class="article__date pt0">Тел: <a href="tel:8-495-688-03-37">8-495-688-03-37</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="apparat-card">
+                        <img src="https://www.sport-uray.ru/wp-content/uploads/avatar-scaled.jpeg" alt="">
+                        <div class="article__footer">
+                            <p class="article__title">Суворова Юлия Геннадьевна</p>
+                            <p class="article__date pt0">Главный правовой инспектор труда</p>
+                            <p class="article__date pt0">Тел: <a href="tel:8-499-325-02-89">8-499-325-02-89</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="apparat-card">
+                        <img src="https://www.sport-uray.ru/wp-content/uploads/avatar-scaled.jpeg" alt="">
+                        <div class="article__footer">
+                            <p class="article__title">Чернышова Людмила Адольфовна</p>
+                            <p class="article__date pt0">Главный бухгалтер</p>
+                            <p class="article__date pt0">Тел: <a href="tel:8-495-688-08-80">8-495-688-08-80</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -95,38 +122,56 @@
                 <h3 class="tac">Президиум</h3>
                 <div class="text-card">
                     <p class="text-bold">Еланский Владислав Георгиевич</p>
-                    <p>Председатель
-                        дорожной территориальной организации
-                        Московского Метрополитена Российского профсоюза
-                        железнодорожников и транспортных строителей</p>
+                    <p>председатель дорожной территориальной организации Московского метрополитена Российского профсоюза  железнодорожников и транспортных строителей
+                    </p>
                 </div>
                 <div class="text-card">
-                    <p class="text-bold">Еланский Владислав Георгиевич</p>
-                    <p>Председатель
-                        дорожной территориальной организации
-                        Московского Метрополитена Российского профсоюза
-                        железнодорожников и транспортных строителей</p>
+                    <p class="text-bold">Сидорова
+                        Надежда Анатольевна</p>
+                    <p>Заместитель председателя дорожной территориальной организации Московского метрополитена Российского профсоюза железнодорожников и транспортных строителей
+                    </p>
                 </div>
                 <div class="text-card">
-                    <p class="text-bold">Еланский Владислав Георгиевич</p>
-                    <p>Председатель
-                        дорожной территориальной организации
-                        Московского Метрополитена Российского профсоюза
-                        железнодорожников и транспортных строителей</p>
+                    <p class="text-bold">Ахлюева Татьяна Ивановна</p>
+                    <p>председатель первичной профсоюзной организации Службы пути Московского метрополитена
+                    </p>
                 </div>
                 <div class="text-card">
-                    <p class="text-bold">Еланский Владислав Георгиевич</p>
-                    <p>Председатель
-                        дорожной территориальной организации
-                        Московского Метрополитена Российского профсоюза
-                        железнодорожников и транспортных строителей</p>
+                    <p class="text-bold">Хренова Надежда Васильевна</p>
+                    <p>Председатель первичной профсоюзной организации электродепо Варшавское Московского метрополитена
+                        </p>
                 </div>
                 <div class="text-card">
-                    <p class="text-bold">Еланский Владислав Георгиевич</p>
-                    <p>Председатель
-                        дорожной территориальной организации
-                        Московского Метрополитена Российского профсоюза
-                        железнодорожников и транспортных строителей</p>
+                    <p class="text-bold">Сычева Ирина Юрьевна</p>
+                    <p>Председатель первичной профсоюзной организации Эскалаторной службы Московского метрополитена</p>
+                </div>
+                <div class="text-card">
+                    <p class="text-bold">Михайлова Светлана Александровна</p>
+                    <p>Председатель первичной профсоюзной организации Службы сигнализации, централизации и блокировки Московского метрополитена</p>
+                </div>
+                <div class="text-card">
+                    <p class="text-bold">Скуднов Андрей Иванович</p>
+                    <p>Председатель первичной профсоюзной организации электродепо Выхино Московского метрополитена</p>
+                </div>
+                <div class="text-card">
+                    <p class="text-bold">Сотникова Светлана Даниловна</p>
+                    <p>Председатель первичной профсоюзной организации Вагоноремонтного комплекса Московского метрополитена</p>
+                </div>
+                <div class="text-card">
+                    <p class="text-bold">Игнатова Елена Михайловна</p>
+                    <p>Председатель первичной профсоюзной организации Службы безопасности Московского метрополитена</p>
+                </div>
+                <div class="text-card">
+                    <p class="text-bold">Никитина Ольга Николаевна</p>
+                    <p>Председатель первичной профсоюзной организации Службы безопасности Московского метрополитена</p>
+                </div>
+                <div class="text-card">
+                    <p class="text-bold">Левтер Татьяна Владимировна</p>
+                    <p>Председатель первичной профсоюзной организации ДИТС Московского метрополитена</p>
+                </div>
+                <div class="text-card">
+                    <p class="text-bold">Лепешкина Ольга Игоревна</p>
+                    <p>Председатель первичной профсоюзной организации Службы сбора доходов Московского метрополитена</p>
                 </div>
             </div>
             <div class="structure-sorted profsouz hidden">

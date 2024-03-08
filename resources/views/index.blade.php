@@ -9,21 +9,9 @@
 @section('main')
     <section class="jb bg">
         <div class="container">
-            <div class="jb-slider">
-                <div><img
-                        src="https://images.unsplash.com/photo-1604585728556-1749cfd13491?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-                        alt=""></div>
-                <div><img
-                        src="https://images.unsplash.com/uploads/1413387158190559d80f7/6108b580?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                        alt=""></div>
-                <div><img
-                        src="https://images.unsplash.com/photo-1609955548274-d1f3f13519b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80"
-                        alt=""></div>
+            <div class="video">
+                <video src="video/depo.mp4" autoplay muted loop preload></video>
             </div>
-            <!-- <div class="slider__arrows">
-                        <button class="btn-prev">&#10094;</button>
-                        <button class="btn-next">&#10095;</button>
-                    </div> -->
         </div>
     </section>
     <section class="text-section">

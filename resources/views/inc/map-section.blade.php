@@ -9,8 +9,7 @@
                 </div>
                 <div>
                     <p class="text-bold purple">Телефоны:</p>
-                    <p><a href="tel:8 (495) 688-04-63">8 (495) 688-04-63</a></p>
-                    <p><a href="tel:8 (495) 688-04-61">8 (495) 688-04-61</a></p>
+                    <p><a href="tel:+7 (495) 622-74-21">+7 (495) 622-74-21</a></p>
                 </div>
                 @include('inc.socials')
             </div>
