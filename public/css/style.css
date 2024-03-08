@@ -233,6 +233,10 @@ main > section {
     width: 100%;
 }
 
+.video video {
+    width: 100%;
+}
+
 .slider__arrows {
     display: flex;
     align-items: center;
