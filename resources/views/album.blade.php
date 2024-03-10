@@ -16,6 +16,12 @@
                 @endforeach
             </div>
         </div>
+        <div class="pop-up">
+            <span>&times;</span>
+            <img src="/img/no_photo.jpg" alt="img">
+        </div>
+    </section>
     @endsection
     @section('scripts')
+    <script src="/js/openImage.js"></script>
     @endsection
