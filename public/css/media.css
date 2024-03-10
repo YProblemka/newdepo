@@ -96,6 +96,10 @@
         font-size: 16px;
     }
 
+    .text-section li {
+        font-size: 16px;
+    }
+
     .jb img {
         height: 350px;
     }
@@ -120,6 +124,9 @@
     }
 
     .text-section p {
+        font-size: 14px;
+    }
+    .text-section li {
         font-size: 14px;
     }
 
