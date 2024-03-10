@@ -10,7 +10,7 @@
     <section class="jb bg">
         <div class="container">
             <div class="video">
-                <video src="video/depo.mp4" autoplay muted loop preload></video>
+                <video src="video/depo.mp4" autoplay muted loop preload playsinline></video>
             </div>
         </div>
     </section>
