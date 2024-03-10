@@ -704,6 +704,7 @@ h3 {
     transform: translate(-50%, -50%);
     border-radius: 8px;
     object-fit: cover;
+    max-width: 900px;
 }
 
 .pop-up span {
